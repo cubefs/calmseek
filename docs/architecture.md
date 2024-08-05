@@ -9,11 +9,7 @@ Calmseek is a cloud-native distributed search system for AI applications.
 
 ## data model
 
-tenant/namespace
-
-document, text, high-dimensional vectors
-
-## schema management
+cluster, tenant/namespace, document, field
 
 semi-schemaless, only indexed fields need to be defined
 
@@ -23,21 +19,14 @@ automatic detection and addition of new indexed fields
 
 ## storage layer
 
-### private cloud deployment
+local filesystems, or cubefs
 
-built on cubefs
+## server components
 
-### public cloud deployment
+calmserver, calmkeeper, calmrouter
 
-WAL on cubefs
+## calmcore
 
-data + index files can be persisted onto cloud storage such as S3
-
-## multitenancy
-
-each tenant has a dedicated namespace
-
-one node can serve tens of thousands active tenants, dynamically loading active namespaces or offloading inactive ones
 
 
 
